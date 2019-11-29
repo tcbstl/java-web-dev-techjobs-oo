@@ -17,6 +17,11 @@ public class Employer {
         this.value = value;
     }
 
+//    public Employer(String aValue) {
+//        this();
+//        this.value = aValue;
+//    }
+
     // Custom toString, equals, and hashCode methods:
 
     @Override
