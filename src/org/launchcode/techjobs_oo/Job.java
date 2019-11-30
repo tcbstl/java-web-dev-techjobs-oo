@@ -61,7 +61,7 @@ public class Job {
                 "\nEmployer: " + employer +
                 "\nLocation: " + location +
                 "\nPosition Type: "  + positionType +
-                "\nCore Competency: " + coreCompetency
+                "\nCore Competency: " + coreCompetency + "\n"
                 ;
     }
 
