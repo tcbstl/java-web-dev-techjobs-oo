@@ -31,10 +31,7 @@ public class JobTest {
 
     @Test
     public void testToString() {
-//        test_toString = new Job("Random Guy", new Employer("Self Employed"), new Location("Saint Louis"), new PositionType("Loser"), new CoreCompetency("Laziness"));
-//        assertEquals("\n\n",test_toString.toString());
         test_toString = new Job("", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
-//        assertEquals("\n\n",test_toString.toString());
         assertEquals("\nID: 7\nName: Data Not Available\nEmployer: Data Not Available\nLocation: Data Not Available\nPosition Type: Data Not Available\nCore Competency: Data Not Available\n",test_toString.toString());
     }
 
