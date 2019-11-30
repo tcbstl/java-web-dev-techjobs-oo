@@ -35,6 +35,37 @@ public class Job {
     //  match.
 
     @Override
+    public String toString() {
+        if (name == ""){
+            this.name = "Data Not Available";
+        }
+
+        if (employer.toString() == "") {
+            this.employer = new Employer("Data Not Available");
+        }
+
+        if (location.toString() == "") {
+            this.location = new Location("Data Not Available");
+        }
+
+        if (positionType.toString() == "") {
+            this.positionType = new PositionType("Data Not Available");
+        }
+
+        if (coreCompetency.toString() == "") {
+            this.coreCompetency = new CoreCompetency("Data Not Available");
+        }
+
+        return "\nID: " + id +
+                "\nName: " + name +
+                "\nEmployer: " + employer +
+                "\nLocation: " + location +
+                "\nPosition Type: "  + positionType +
+                "\nCore Competency: " + coreCompetency
+                ;
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;

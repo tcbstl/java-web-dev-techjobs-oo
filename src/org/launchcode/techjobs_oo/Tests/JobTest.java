@@ -13,6 +13,9 @@ public class JobTest {
     Job test_allFields;
     Job test_equality;
     Job test_equality2;
+    Job test_toString;
+    Job test_toStringLabels;
+    Job test_toStringLabelsName;
 
     @Test
     public void testJobConstructorSetsAllFields(){
@@ -24,6 +27,25 @@ public class JobTest {
         assertEquals("Desert", test_allFields.getLocation().toString());
         assertEquals("Quality Control", test_allFields.getPositionType().toString());
         assertEquals("Persistence", test_allFields.getCoreCompetency().toString());
+    }
+
+    @Test
+    public void testToString() {
+        test_toString = new Job("Random Guy", new Employer("Self Employed"), new Location("Saint Louis"), new PositionType("Loser"), new CoreCompetency("Laziness"));
+        assertEquals("\n\n",test_toString.toString());
+    }
+
+    @Test
+    public void testToStringLabels() {
+
+        test_toStringLabels = new Job("Random Guy", new Employer("Self Employed"), new Location("Saint Louis"), new PositionType("Loser"), new CoreCompetency("Laziness"));
+        assertEquals("\nID: 3\nName: Random Guy\nEmployer: Self Employed\nLocation: Saint Louis\nPosition Type: Loser\nCore Competency: Laziness",test_toStringLabels.toString());
+    }
+
+    @Test
+    public void testToStringLabelsName() {
+        test_toStringLabelsName = new Job("", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
+        assertEquals("\nID: 3\nName: Data Not Available\nEmployer: Data Not Available\nLocation: Data Not Available\nPosition Type: Data Not Available\nCore Competency: Data Not Available",test_toStringLabelsName.toString());
     }
 
     @Test
